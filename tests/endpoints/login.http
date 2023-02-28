@@ -1,0 +1,17 @@
+@host=http://127.0.0.1:5000
+#@host=https://webappbackoffice.azurewebsites.net
+#@token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2MTc5OTM0NiwianRpIjoiOWQxN2ExYmUtNDVkMy00NWQ5LWI2ZDItMTIwMTI2Mjg3NGRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6WzIsInNlcmdpby53ZWxsaW5ndG9uQHRyYW5zZmVyby5jb20iXSwibmJmIjoxNjYxNzk5MzQ2LCJleHAiOjE2NjE4MDI5NDZ9.ahQ2Bzim2Vo2HQ4AWyFg3FOj5C8XBChxESWbjf981t0
+
+PUT {{host}}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "sergio.wellington1@transfero.com",
+    "senha": "Tony@123"
+}
+###
+GET {{host}}/login/listaConfiguracao HTTP/1.1
+content-type: application/json
+
+###
+'{"usuarioId":7,"nomeUsuario":"Sergio Wellington","usuarioGuid":"df205109-f6f1-11ec-b32c-566fe1410274","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNlcmdpby53ZWxsaW5ndG9uQHRyYW5zZmVyby5jb20iLCJuYmYiOjE2NjUxNTY3MjIsImV4cCI6MTY2NTE2MDMyMiwiaWF0IjoxNjY1MTU2NzIyfQ.57w8BgYtKfYpFKB6Q_Nbxzim2y03QjptkVFYQzI4IO8","primeiroAcesso":false,"senhaExpirada":false,"bloqueado":false,"permissionamento":[]}'

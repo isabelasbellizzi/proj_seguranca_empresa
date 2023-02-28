@@ -1,0 +1,57 @@
+@host=http://127.0.0.1:5000/users
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uMUB0cmFuc2Zlcm8uY29tIn0sImV4cGlyZXMiOm51bGx9.Pl37i3zVblMRVPpZeCnoWKqDf9xGftsOusZgZnUv_CU
+
+###CREATE###
+
+POST {{host}}/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "azure_id": "77862cd9-601f-456b-af59-e9e8ba4a389f",
+  "user_email": "tes4teswagger4@teste.com"
+}
+
+###
+
+###READ###
+
+GET {{host}}/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/71 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}email/tes4teswagger4@teste.com HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+
+###UPDATE###
+
+PUT {{host}}/users/2 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "user_email":"teste1@atualizado.com",
+    "azure_id":"5c062c52-e5ac-4bd7-9c76-dbd7b839a054"
+
+}
+###
+
+###DELETE###
+
+DELETE {{host}}/users/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+
+

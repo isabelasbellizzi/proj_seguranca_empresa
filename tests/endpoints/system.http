@@ -1,0 +1,46 @@
+@host=https://dev-seguranca-academy.azurewebsites.net/
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uQHRyYW5zZmVyby5jb20ifSwiZXhwaXJlcyI6bnVsbH0.O6sOt5LxM1_FpojLCS_yn5cxg5hbQYJRDivf7vtJaHU
+
+
+get {{host}}/systems HTTP/1.1
+content-type: application/json 
+Authorization: Bearer {{token}}
+
+###
+
+get {{host}}/systems/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+put {{host}}/systems/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "system_name":"Controle do Fumo Teste 54",
+    "token_id":"08797c05-467b-4c1a-acd2-261252be30e2"
+
+}
+###
+
+post {{host}}/systems/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "system_name":"Controle do Fumo 4",
+    "token_id":"08797c05-467b-4c1a-acd2-261252be30e0"
+
+}
+###
+
+delete {{host}}/systems/5 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+#ed705200-480c-48d9-a514-1e3dd9dc0af4

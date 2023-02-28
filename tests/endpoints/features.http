@@ -1,0 +1,56 @@
+@host = https://dev-seguranca-academy.azurewebsites.net
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uQHRyYW5zZmVyby5jb20ifSwiZXhwaXJlcyI6bnVsbH0.O6sOt5LxM1_FpojLCS_yn5cxg5hbQYJRDivf7vtJaHU
+
+###CREATE###
+
+POST {{host}}/features/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "paper_id": 52, 
+    "function_id": 21,
+    "create": true
+   
+}
+
+###
+
+###READ###
+
+GET {{host}}/features/14 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/features/?paper_id=52&function_id=21 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+
+###UPDATE###
+
+PUT {{host}}/features/13 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "create": "true",
+    "read": "true",
+    "update": "true"
+
+}
+### Como deixar sem passar 1 dos parâmetros? Não podemos deixar false como padrão
+
+###DELETE###
+
+DELETE {{host}}/features/47 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+
+

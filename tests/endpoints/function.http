@@ -1,0 +1,42 @@
+@host = https://dev-seguranca-academy.azurewebsites.net
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uQHRyYW5zZmVyby5jb20ifSwiZXhwaXJlcyI6bnVsbH0.O6sOt5LxM1_FpojLCS_yn5cxg5hbQYJRDivf7vtJaHU
+
+POST {{host}}/functions/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+    "name":"nomenovonomenovo34562134",
+    "function_type":"2",
+    "system_id":1
+
+}
+###
+
+DELETE {{host}}/functions/150 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/functions/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/functions/21 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+PUT {{host}}/functions/21 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "function_name":"funcao10 111",
+    "function_type":"1"
+}
+###
+
+# adicionar erro de system not found no updatefunctionservice

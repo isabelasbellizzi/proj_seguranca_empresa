@@ -1,0 +1,39 @@
+@host =https://dev-seguranca-academy.azurewebsites.net/
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uMUB0cmFuc2Zlcm8uY29tIn0sImV4cGlyZXMiOm51bGx9.Pl37i3zVblMRVPpZeCnoWKqDf9xGftsOusZgZnUv_CU
+
+
+
+POST {{host}}/papers HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+
+   "system_id": "1",
+   "paper_name": "dsaso5554"
+
+}
+###
+DELETE {{host}}/papers/54 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/papers/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/papers/53 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+PUT {{host}}/papers/53 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+   "paper_name": "daohghfdhgdhouikg"
+}
+###

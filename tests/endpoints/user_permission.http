@@ -1,0 +1,27 @@
+@host = http://127.0.0.1:5000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOiJkZjIwNTEwOS1mNmYxLTExZWMtYjMyYy01NjZmZTE0MTAyNzQiLCJlbWFpbCI6InNlcmdpby53ZWxsaW5ndG9uMUB0cmFuc2Zlcm8uY29tIn0sImV4cGlyZXMiOm51bGx9.gZWN-fMSDuZF1E3ND7WR8_KDlAwQWCxJfi8zjlfSNHE
+
+POST {{host}}/user_permissions HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "user_id":100,
+    "paper_id": [55, 515]
+}
+###
+
+DELETE {{host}}/user_permissions/165 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/user_permissions/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
+
+GET {{host}}/user_permissions/9 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+###
